@@ -1,6 +1,8 @@
+package AddTwoNumbers;
+
 import java.math.BigInteger;
 
-public class p2 {
+public class two {
 
     public static class ListNode {
       int val;
