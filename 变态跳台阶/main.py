@@ -1,12 +1,15 @@
-def jumpFloorII(number):
-    def jumpFloor(number):
-        list = [1]
+# -*- coding:utf-8 -*-
+class Solution:
+    def jumpFloorII(self, number):
+        prev_sum = 0
+        while number:
+            cur = prev_sum + 1
+            prev_sum += cur
+            number -= 1
+        return cur
+
+class Solution2:
+    def jumpFloorII(self, number):
         if number == 1:
-            return list[0]
-        else:
-            for k in range(1, number):
-                e = 1  # 本级台阶的方法数
-                for ek in range(k):
-                    e += list[ek]
-                list.append(e)
-        return list[number - 1]
+            return 1
+        return 2 << (number - 2)
