@@ -1,9 +1,10 @@
-def Fibonacci(n):
-    k, a, b = 0, 0, 1
-    while k < n:
-        a, b = b, a + b
-        k += 1
-        yield a
-
-for i in Fibonacci(3):
-    print(i)
+# -*- coding:utf-8 -*-
+class Solution:
+    def Fibonacci(self, n):
+        if n == 0:
+            return 0
+        p, q = 0, 1
+        while n > 1:
+            p, q = q, p + q
+            n -= 1
+        return q
