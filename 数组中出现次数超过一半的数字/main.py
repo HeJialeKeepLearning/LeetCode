@@ -1,11 +1,9 @@
-def MoreThanHalfNum_Solution(numbers):
-    cnt = {}
-    for number in numbers:
-        if number in cnt:
-            numbercnt = cnt.get(number)
-            cnt[number] = numbercnt + 1
-        else:
-            cnt[number] = 1
-        if cnt.get(number) == int(len(numbers) / 2) + 1:
-            return number
-    return 0
+# -*- coding:utf-8 -*-
+class Solution:
+    def MoreThanHalfNum_Solution(self, numbers):
+        number_dict = {}
+        for number in numbers:
+            number_dict[number] = number_dict.get(number, 0) + 1
+            if number_dict[number] > len(numbers) / 2:
+                return number
+        return 0
