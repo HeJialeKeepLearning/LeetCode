@@ -1,15 +1,10 @@
-def FirstNotRepeatingChar(s):
-    chardict = {}
-    for c in s:
-        if c in chardict:
-            chardict[c] += 1
-        else:
-            chardict[c] = 1
-    index = len(s) - 1
-    for key, value in chardict.items():
-        if value == 1:
-            nowindex = s.index(key)
-            if index > nowindex:
-                index = nowindex
-
-    return index
+# -*- coding:utf-8 -*-
+class Solution:
+    def FirstNotRepeatingChar(self, s):
+        occur_dict = {}
+        for string in s:
+            occur_dict[string] = occur_dict.get(string, 0) + 1
+        for string in s:
+            if occur_dict[string] == 1:
+                return s.index(string)
+        return -1
