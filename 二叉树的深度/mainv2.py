@@ -5,12 +5,12 @@
 #         self.left = None
 #         self.right = None
 class Solution:
-    def TreeDepth(self, pRoot):
-        if not pRoot:
+    def TreeDepth(self, root):
+        if not root:
             return 0
-        queue = [pRoot]
+        queue = [root]
         depth = 0
-        right_p = pRoot
+        right_p = root
         while queue:
             p = queue[0]
             queue.remove(p)
