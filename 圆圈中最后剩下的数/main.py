@@ -1,15 +1,13 @@
-def LastRemaining_Solution(n, m):
-    if n == 0:
-        return -1
-    childlist = []
-    index = 0  # 创建小孩的编号列表
-    while index < n:
-        childlist.append(index)
-        index += 1
-    delindex = 0
-    while len(childlist) > 1:
-        delindex = (delindex + m - 1) % len(childlist)
-        del childlist[delindex]
-    for v in childlist:
-        if v != -1:
-            return v
+# -*- coding:utf-8 -*-
+class Solution:
+    def LastRemaining_Solution(self, n, m):
+        if n == 0:
+            return -1
+        length = n
+        child_numbers = [i for i in range(n)]
+        out_index = (m - 1) % length
+        while length > 1:
+            child_numbers.pop(out_index)
+            length -= 1
+            out_index = (out_index + m - 1) % length
+        return child_numbers[0]
