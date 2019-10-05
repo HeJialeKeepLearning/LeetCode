@@ -1,4 +1,4 @@
-def LeftRotateString(s, n):
-    leftstr = s[:n]  # 左边n个字符串
-    s = s[n:]
-    return s+leftstr
+# -*- coding:utf-8 -*-
+class Solution:
+    def LeftRotateString(self, s, n):
+        return s[n:] + s[:n]
