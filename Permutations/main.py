@@ -8,10 +8,10 @@ def permute(nums):
         crest = [x for x in nums if x != c]
         nextlists = permute(crest)
         for nextlist in nextlists:
-            currentlist=[c]
+            currentlist = [c]
             for nexte in nextlist:
                 currentlist.append(nexte)
             resultlist.append(currentlist)
     return resultlist
 
-permute([1,2,3])
+permute([1, 2, 3])
