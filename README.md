@@ -4,7 +4,7 @@
 # 很有启发的题解记录
 ## 动态规划
 1. 动态规划入门版：带“备忘录”的递归
-https://leetcode-cn.com/problems/fibonacci-number/solution/dong-tai-gui-hua-tao-lu-xiang-jie-by-labuladong/]
+https://leetcode-cn.com/problems/fibonacci-number/solution/dong-tai-gui-hua-tao-lu-xiang-jie-by-labuladong/
 2. 动态规划思想：状态机
 https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iii/solution/yi-ge-tong-yong-fang-fa-tuan-mie-6-dao-gu-piao-wen/
 ## 树的遍历
